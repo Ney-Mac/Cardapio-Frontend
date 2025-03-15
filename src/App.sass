@@ -1,0 +1,30 @@
+@use './assets/globalStyles/mixins'
+
+.container
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    width: 100%
+
+    .card-grid
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 16px
+
+    .button-primary
+        @include mixins.button
+        position: fixed
+        bottom: 16px
+        right: 24px
+    
+    .button-cancel
+        @include mixins.button(#ff2c2c)
+        position: fixed
+        bottom: 16px
+        right: 24px
+    
+    .empty-text
+        font-size: 2rem
+        color: #5d5757
+        

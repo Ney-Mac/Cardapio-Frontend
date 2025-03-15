@@ -1,0 +1,19 @@
+@use 'variables'
+
+@mixin button($color: variables.$primary-color)
+    padding: 8px 32px
+    margin-top: 16px
+    border: none
+    border-radius: 25px
+    font-weight: bold
+    color: #fff
+    background-color: $color
+    transition: all ease 0.5s
+
+    &:hover
+        @if $color == #ff2c2c
+            background-color: #d1001f
+        @else 
+            background-color: variables.$secondary-color 
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px
+        transform: scale(1.1)
